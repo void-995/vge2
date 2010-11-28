@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/images/graph-arrow.png</file>
+        <file>resource/images/graph-arrow-blue.png</file>
+        <file>resource/images/graph-arrow-green.png</file>
+        <file>resource/images/graph-arrow-red.png</file>
+        <file>resource/images/graph-arrow-yellow.png</file>
+        <file>resource/images/graph-grid.png</file>
+        <file>resource/images/graph-vertex.png</file>
+        <file>resource/images/graph-vertex-blue.png</file>
+        <file>resource/images/graph-vertex-green.png</file>
+        <file>resource/images/graph-vertex-red.png</file>
+        <file>resource/images/graph-vertex-yellow.png</file>
+        <file>resource/images/menu-add.png</file>
+        <file>resource/images/menu-aligntogrid.png</file>
+        <file>resource/images/menu-autoconnect.png</file>
+        <file>resource/images/menu-connect.png</file>
+        <file>resource/images/menu-delete.png</file>
+        <file>resource/images/menu-disconnect.png</file>
+        <file>resource/images/menu-exit.png</file>
+        <file>resource/images/menu-grid.png</file>
+        <file>resource/images/menu-help.png</file>
+        <file>resource/images/menu-languages.png</file>
+        <file>resource/images/menu-new.png</file>
+        <file>resource/images/menu-open.png</file>
+        <file>resource/images/menu-remove.png</file>
+        <file>resource/images/menu-save.png</file>
+        <file>resource/images/menu-saveas.png</file>
+        <file>resource/images/qt-logo.png</file>
+        <file>resource/images/window-icon.png</file>
+    </qresource>
+</RCC>
