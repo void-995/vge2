@@ -12,6 +12,9 @@
 // Project
 #include "wndmain.h"
 
+// GLU
+#include <GL/glu.h>
+
 static const float pConstColorRed[4] = {1.0f, 0.0f, 0.0f, 1.0f};
 static const float pConstColorGreen[4] = {0.0f, 1.0f, 0.0f, 1.0f};
 static const float pConstColorBlue[4] = {0.0f, 0.0f, 1.0f, 1.0f};
