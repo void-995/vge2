@@ -2,6 +2,7 @@
 # Project created by QtCreator 2010-03-22T15:53:57
 # -------------------------------------------------
 win32:RC_FILE = qgrapheditor2.rc
+unix:LIBS += -lGLU
 # -------------------------------------------------
 TRANSLATIONS = grapheditor2_en.ts \
     grapheditor2_ua.ts \
