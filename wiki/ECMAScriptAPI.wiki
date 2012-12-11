@@ -24,14 +24,14 @@ Each script must have at least those 3 special functions:
 = Graph Editor ECMAScript API =
 ECMAScript API has an additional objects to easier manipulation of the graph:
   * `GraphVertex`;
-  * `GraphNode`.
+  * `GraphEdge`.
 
 The attributes of the `GraphVertex` object are following:
   * `x` - _x_ position of vertex in the 3D space;
   * `y` - _y_ position of vertex in the 3D space;
   * `z` - _z_ position of vertex in the 3D space.
 
-The attributes of the `GraphNode` object are following:
+The attributes of the `GraphEdge` object are following:
   * `from` - index of vertex where the edge starts;
   * `to` - index of vertex where the edge ends.
 
