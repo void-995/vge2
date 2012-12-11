@@ -705,11 +705,11 @@ ScriptManager::ScriptManager(QObject *parent) :
 
             qScriptRegisterMetaType(m_pScriptEngine, toScriptValue_grVertex, fromScriptValue_grVertex);
             QScriptValue ctor_grVertex = m_pScriptEngine->newFunction(new_grVertex);
-            m_pScriptEngine->globalObject().setProperty("grVertex", ctor_grVertex);
+            m_pScriptEngine->globalObject().setProperty("GraphVertex", ctor_grVertex);
 
             qScriptRegisterMetaType(m_pScriptEngine, toScriptValue_grEdge, fromScriptValue_grEdge);
             QScriptValue ctor_grEdge = m_pScriptEngine->newFunction(new_grEdge);
-            m_pScriptEngine->globalObject().setProperty("grEdge", ctor_grEdge);
+            m_pScriptEngine->globalObject().setProperty("GraphEdge", ctor_grEdge);
 
             m_pScriptEngine->globalObject().setProperty("alert", m_pScriptEngine->newFunction(scriptAlert));
             m_pScriptEngine->globalObject().setProperty("confirm", m_pScriptEngine->newFunction(scriptConfirm));
@@ -732,7 +732,7 @@ ScriptManager::ScriptManager(QObject *parent) :
             valVGE2Namespace.setProperty("getVertexByIndex", m_pScriptEngine->newFunction(scriptVGE2GetVertexByIndex));
             valVGE2Namespace.setProperty("markGraphsPart", m_pScriptEngine->newFunction(scriptVGE2MarkGraphsPart));
 
-            m_pScriptEngine->globalObject().setProperty("VGE2", valVGE2Namespace);
+            m_pScriptEngine->globalObject().setProperty("GraphEditorApi", valVGE2Namespace);
 
             m_pScriptEngine->evaluate(strScriptText, QString(filesList[i] + QString(".js")));
 

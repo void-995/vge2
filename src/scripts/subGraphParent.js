@@ -1,4 +1,4 @@
-/* ECMA-262 script, dialect: QtScript, VGE2 extensions
+/* ECMA-262 script, dialect: QtScript, GraphEditorApi extensions
  *************************************************************
  * File: subGraphParent.js
  * Author: Aleksandr Palamar
@@ -8,13 +8,12 @@
 */
 
 /*jslint nomen: true, plusplus: true, continue: true, sloppy: true*/
-/*jslint newcap: true*/
 /*jslint indent: 4, maxerr: 50*/
-/*global VGE2*/
+/*global GraphEditorApi*/
 /*global CONNECTION_FROM*/
 /*global CONNECTION_TO*/
-/*global grVertex*/
-/*global grEdge*/
+/*global GraphVertex*/
+/*global GraphEdge*/
 
 var verticesToSelect, edgesToSelect, maximumSubCalls;
 
@@ -36,7 +35,7 @@ function buildParentSubGraph(index, subCallNumber) {
 	var i, edges;
 	edges = [];
 
-	VGE2.getEdgesOfVertex(index, CONNECTION_TO, edges);
+	GraphEditorApi.getEdgesOfVertex(index, CONNECTION_TO, edges);
 	verticesToSelect[verticesToSelect.length] = index;
 
 	for (i = 0; i < edges.length; i++) {
@@ -55,10 +54,10 @@ function buildParentSubGraph(index, subCallNumber) {
 function onMenuClicked() {
 	var selectedIndexes;
 	selectedIndexes = [];
-	VGE2.getSelectedIndexes(selectedIndexes);
+	GraphEditorApi.getSelectedIndexes(selectedIndexes);
 
 	buildParentSubGraph(selectedIndexes[0]);
-	VGE2.markGraphsPart(verticesToSelect, edgesToSelect);
+	GraphEditorApi.markGraphsPart(verticesToSelect, edgesToSelect);
 }
 
 /* function
