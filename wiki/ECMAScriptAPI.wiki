@@ -75,3 +75,9 @@ To work with graph that is stored in the editor you can use following methods fr
   * `markGraphsPart(vertices, edges)` - mark the sub-graph in editor:
     * `vertices` - array of `GraphVertex` objects that should be marked in the graph;
     * `edges` - array of `GraphEdge` objects that should be marked in the graph.
+
+= Examples =
+The following examples could be found in the source code:
+  * Finding child sub-graph - [https://code.google.com/p/vge2/source/browse/trunk/src/scripts/subGraphChild.js]
+  * Finding parent sub-graph - [https://code.google.com/p/vge2/source/browse/trunk/src/scripts/subGraphParent.js]
+  * Floyd-Warshall algorithm - [https://code.google.com/p/vge2/source/browse/trunk/src/scripts/pathfindFloyd.js]
