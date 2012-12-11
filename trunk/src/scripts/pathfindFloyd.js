@@ -1,4 +1,4 @@
-/* ECMA-262 script, dialect: QtScript, VGE2 extensions
+/* ECMA-262 script, dialect: QtScript, GraphEditorApi extensions
  *************************************************************
  * File: pathfindFloyd.js
  * Author: Aleksandr Palamar
@@ -8,13 +8,12 @@
 */
 
 /*jslint nomen: true, plusplus: true, continue: true, sloppy: true*/
-/*jslint newcap: true*/
 /*jslint indent: 4, maxerr: 50*/
-/*global VGE2*/
+/*global GraphEditorApi*/
 /*global CONNECTION_FROM*/
 /*global CONNECTION_TO*/
-/*global grVertex*/
-/*global grEdge*/
+/*global GraphVertex*/
+/*global GraphEdge*/
 
 /* function
  *************************************************************
@@ -31,11 +30,11 @@ function onMenuClicked() {
 		verticesToSelect, edgesToSelect;
 
 	selectedIndexes = [];
-	VGE2.getSelectedIndexes(selectedIndexes);
+	GraphEditorApi.getSelectedIndexes(selectedIndexes);
 
 	vertices = [];
 	edges = [];
-	VGE2.getGraph(vertices, edges);
+	GraphEditorApi.getGraph(vertices, edges);
 
 	matrixDistances = [];
 
@@ -110,12 +109,12 @@ function onMenuClicked() {
 		while (i !== j) {
 			i = matrixIndexes[i][j];
 			verticesToSelect[k] = i;
-			edgesToSelect[k - 1] = new grEdge(verticesToSelect[k - 1], verticesToSelect[k]);
+			edgesToSelect[k - 1] = new GraphEdge(verticesToSelect[k - 1], verticesToSelect[k]);
 			k++;
 		}
 	}
 
-	VGE2.markGraphsPart(verticesToSelect, edgesToSelect);
+	GraphEditorApi.markGraphsPart(verticesToSelect, edgesToSelect);
 }
 
 /* function
